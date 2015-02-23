@@ -3,9 +3,26 @@
 <head>
 </head>
 <body>
-  <h1>Asteroids!</h1>
+  <style>
+    * {
+      background: black;
+      color: white;
+      margin: 0 auto;
+    }
 
+    canvas{
+      background-image: url("http://31.media.tumblr.com/tumblr_m11wcjKUNx1qhgmnco1_500.gif");
+      display: block;
+      border: 5px solid chartreuse;
+    }
+    h2 {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+  <h1 style="text-align:center;">Asteroids!</h1>
   <canvas id="game-canvas" width="700" height="500"></canvas>
+  <canvas id="points" width="700" height="100"></canvas>
   <script src="keymaster.js"></script>
   <script src="./utils.js"></script>
   <script src="./movingObject.js"></script>
@@ -17,9 +34,10 @@
   <script>
     var canvas = document.getElementById("game-canvas");
     var ctx = canvas.getContext("2d");
+    var points = document.getElementById("points");
+    var pts = points.getContext("2d");
     var game = new window.Asteroids.Game();
-    var gameView = new window.Asteroids.GameView(game, ctx);
-
+    var gameView = new window.Asteroids.GameView(game, ctx, pts);
     gameView.start();
   </script>
 </body>
