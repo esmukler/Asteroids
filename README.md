@@ -1,6 +1,6 @@
 # Asteroids
 
-## [Let's Play It Live!](esmukler.github.io/Asteroids)
+## [Let's Play It Live!](http://esmukler.github.io/Asteroids)
 
 ## Features:
 * Written in JavaScript.
